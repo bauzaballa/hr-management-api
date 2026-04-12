@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+set -e
+
+echo "🏗️ Ejecutando build antes del push..."
+npm run build || {
+  echo "❌ Build falló. Corrige los errores antes de pushear."
+  exit 1
+}
+
+echo "✅ Build exitosa, push permitido!"
